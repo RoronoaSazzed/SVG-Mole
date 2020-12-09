@@ -148,6 +148,7 @@
 /* Second Step - Body Starts */
 
 #full-body {
+    opacity: .75;
     transform: translateY(150px);
     animation: body 1.5s ease 1.3s 1 normal forwards;
 }
@@ -155,7 +156,6 @@
 @keyframes body {
     from {
         transform: translateY(150px);
-        opacity: .75;
     }
 
     to {
@@ -286,3 +286,29 @@
 }
 
 /* Fifth Step - Left Hand Ends */
+
+/* Media Query For Mobile */
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+    svg{
+        width: 100%;
+        min-height: 0px;
+    }
+
+    #full-body{
+        opacity: 0;
+    }
+
+    @keyframes body {
+        from {
+            transform: translateY(50px);
+        }
+    
+        to {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+    
+  }
